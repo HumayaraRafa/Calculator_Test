@@ -1,0 +1,77 @@
+package nativeAppAutomation;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import io.appium.java_client.AppiumDriver;
+
+public class Calculator {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+       
+		//DesiredCapabilities object create and named as dc
+		DesiredCapabilities dc=new DesiredCapabilities();
+		
+		//Mobile details
+		dc.setCapability("deviceName","Galaxy S9+");
+		dc.setCapability("udid","235021d0ca0c7ece");
+		dc.setCapability("platformName","Android");
+		dc.setCapability("platformVersion","10");
+	    
+		//App Details
+		dc.setCapability("appPackage","com.google.android.calculator");
+		dc.setCapability("appActivity","com.android.calculator2.Calculator");
+		
+		//192.168.0.100:5555
+		
+		//Server setup
+		URL server= new URL("http://127.0.0.1:4723/wd/hub");
+		
+		//AppiumDriver object creation & send DesiredCapabilities information & server details
+		AppiumDriver MobileObj= new AppiumDriver(server,dc);
+		
+	    //for verification purpose
+		System.out.println("App Opening");
+		
+		//Target 2+6=8 & more option click
+		//digit 2 object create
+		WebElement digit2 =MobileObj.findElement(By.id("com.google.android.calculator:id/digit_2"));
+
+		//digit 6 object create
+		WebElement digit6 =MobileObj.findElement(By.id("com.google.android.calculator:id/digit_6"));
+		
+		//equalbtn object create
+		WebElement eqBtn =MobileObj.findElement(By.id("com.google.android.calculator:id/eq"));
+		
+		//addbtn object create
+		WebElement addbtn =MobileObj.findElement(By.id("com.google.android.calculator:id/op_add"));
+		
+		//more option Btn object create
+		WebElement optbtn =MobileObj.findElement(By.xpath("//android.widget.ImageView[@content-desc='More options']"));
+	 
+		
+	  //delay for 2sec
+		Thread.sleep(2000);
+		
+	    //action place
+		digit2.click();
+		addbtn.click();
+		digit6.click();
+		eqBtn.click();
+		optbtn.click();
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+
+}

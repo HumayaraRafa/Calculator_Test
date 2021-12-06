@@ -1,0 +1,39 @@
+My Phone Number is 01788355097, so the equation will be:
+
+7th digit: 5
+6th digit: 3
+8th digit: 5
+9th digit: 0
+
+[(5 + 3) - {5 * 0}] / 2
+
+8 - 0/2
+8/2
+4
+
+Brackets
+com.google.android.calculator:id/parens
+5 click
+com.google.android.calculator:id/digit_5
++
+com.google.android.calculator:id/op_add
+3 click
+com.google.android.calculator:id/digit_3
+Brackets
+com.google.android.calculator:id/parens
+
+-
+com.google.android.calculator:id/op_sub
+brackets
+com.google.android.calculator:id/parens
+5 click
+com.google.android.calculator:id/digit_5
+multiply
+com.google.android.calculator:id/op_mul
+zero
+com.google.android.calculator:id/digit_0
+divition
+com.google.android.calculator:id/op_div
+2 click
+com.google.android.calculator:id/digit_2
+

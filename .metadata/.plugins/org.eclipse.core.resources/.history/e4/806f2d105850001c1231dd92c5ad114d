@@ -1,0 +1,27 @@
+package nativeAppAutomation;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       
+		//DesiredCapabilities object create and named as dc
+		DesiredCapabilities dc=new DesiredCapabilities();
+		//Mobile details
+		dc.setCapability("deviceName","Galaxy S9+");
+		dc.setCapability("udid","235021d0ca0c7ece");
+		dc.setCapability("platformName","Android");
+		dc.setCapability("platformVersion","10");
+	    
+		
+		dc.setCapability("appPackage","com.google.android.calculator");
+		dc.setCapability("appActivity","com.android.calculator2.Calculator");
+		
+		
+		
+	
+	}
+
+}
